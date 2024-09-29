@@ -57,6 +57,17 @@ function renderizarTarefas() {
 
 renderizarTarefas();
 
+
+// ao clicar Enter enviar o conteudo do input
+inpt.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Impede o envio do formulário
+      btn.click();
+    }
+});
+
+
+
 // pegando evento clique de botao
 btn.onclick = function () {
 
